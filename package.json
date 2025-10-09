@@ -1,27 +1,22 @@
 {
   "name": "ts-blog",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "module": "src/server.ts",
-
   "scripts": {
     "dev": "bun --watch src/server.ts",
     "build": "bun build src/server.ts --outdir ./dist --target bun --minify",
     "start": "bun run src/server.ts",
     "start:prod": "NODE_ENV=production bun run dist/server.js",
-
     "test": "vitest run",
     "test:watch": "vitest",
-
     "lint": "bun eslint src test --config ./eslint.config.ts",
     "lint:fix": "bun eslint src test --fix --config ./eslint.config.ts",
     "format": "bun prettier --config .prettierrc.ts --write src test",
     "format:check": "bun prettier --config .prettierrc.ts --check src test",
-
     "prepare": "husky install",
     "release": "standard-version"
   },
-
   "lint-staged": {
     "src/**/*.{js,ts,tsx,vue}": [
       "bun eslint --fix --config ./eslint.config.ts",
@@ -32,11 +27,17 @@
       "bun prettier --config .prettierrc.ts --write"
     ]
   },
-
   "standard-version": {
-    "types": ["feat","fix","chore","docs","refactor","perf","test"]
+    "types": [
+      "feat",
+      "fix",
+      "chore",
+      "docs",
+      "refactor",
+      "perf",
+      "test"
+    ]
   },
-
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
@@ -56,11 +57,9 @@
     "@types/bun": "latest",
     "tsx": "^4.20.6"
   },
-
   "peerDependencies": {
     "typescript": "^5.9.3"
   },
-
   "dependencies": {
     "zod": "^4.1.12"
   }
