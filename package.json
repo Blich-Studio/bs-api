@@ -1,6 +1,7 @@
 {
   "name": "ts-blog",
   "module": "src/server.ts",
+  "version": "0.2.0",
   "type": "module",
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
@@ -52,6 +53,14 @@
     ]
   },
   "standard-version": {
-    "types": ["feat", "fix", "chore", "docs", "refactor", "perf", "test"]
+    "types": [
+      "feat",
+      "fix",
+      "chore",
+      "docs",
+      "refactor",
+      "perf",
+      "test"
+    ]
   }
 }
