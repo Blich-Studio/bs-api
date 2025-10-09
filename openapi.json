@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Zodiac API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "ZodiacSign": {
+        "type": "string",
+        "enum": [
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn",
+          "Aquarius",
+          "Pisces"
+        ]
+      },
+      "Element": {
+        "type": "string",
+        "enum": [
+          "Fire",
+          "Earth",
+          "Air",
+          "Water"
+        ]
+      }
+    },
+    "parameters": {}
+  },
+  "paths": {}
+}
