@@ -1,0 +1,37 @@
+# Build output
+dist/
+build/
+bun.lockb
+
+# Dependencies
+node_modules/
+
+# Environment and logs
+.env
+*.log
+
+# Config files
+*.config.*
+*.conf.*
+tsconfig.json
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+.prettierrc.*
+.commitlintrc.*
+eslint.config.*
+vite.config.*
+docker-compose.*
+Dockerfile
+
+# Scripts & tools
+scripts/
+.husky/
+coverage/
+
+# IDE & system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
