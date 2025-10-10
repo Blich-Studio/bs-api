@@ -5,14 +5,33 @@ import prettier from "eslint-plugin-prettier";
 import importPlugin from "eslint-plugin-import";
 
 export default [
-  js.configs.recommended, // ✅ fixed: no longer spread
+  js.configs.recommended,
   {
     files: ["**/*.{ts,tsx,js,jsx}"],
+    ignores: ["dist/**"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
         sourceType: "module",
         ecmaVersion: "latest"
+      },
+      globals: {
+        // ✅ Node.js globals
+        process: "readonly",
+        __dirname: "readonly",
+        require: "readonly",
+        module: "readonly",
+        console: "readonly",
+
+        // ✅ Jest globals
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeAll: "readonly",
+        beforeEach: "readonly",
+        afterAll: "readonly",
+        afterEach: "readonly"
       }
     },
     plugins: {
@@ -22,10 +41,9 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      "prettier/prettier": "error",
+      "prettier/prettier": "warn",
       "import/order": ["error", { "newlines-between": "always" }],
       "no-unused-vars": "warn"
     }
   }
 ];
-

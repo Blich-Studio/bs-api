@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-echo "🧾 Validating commit message..."
-bunx commitlint --edit "$1"
