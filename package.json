@@ -4,18 +4,11 @@
   "type": "module",
   "module": "src/server.ts",
   "scripts": {
-    "dev": "bun --watch src/server.ts",
-    "build": "bun build src/server.ts --outdir ./dist --target bun --minify",
-    "start": "bun run src/server.ts",
-    "start:prod": "NODE_ENV=production bun run dist/server.js",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "bun eslint src test",
-    "lint:fix": "bun eslint src test --fix",
-    "format": "bun prettier --write src test",
-    "format:check": "bun prettier --check src test",
-    "release": "standard-version",
-    "prepare": "husky install"
+    "prepare": "husky && husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "release": "standard-version"
   },
   "standard-version": {
     "types": [
@@ -41,11 +34,11 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
-    "husky": "^9.1.7",
+    "husky": "^8.0.0",
     "jq": "^1.7.2",
     "lint-staged": "^16.2.3",
     "prettier": "^3.6.2",
-    "standard-version": "9.5.0",
+    "standard-version": "^9.5.0",
     "tsx": "^4.20.6",
     "typescript-eslint": "^8.46.0",
     "vitest": "^3.2.4"
