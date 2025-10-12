@@ -16,11 +16,6 @@ app.use(morganMiddleware)
 // Serve API docs (not versioned — keep this global)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
-//FIXME delete this before deploy to prod
-app.get('/logger', (_, res) => {
-  res.send('Hello world')
-})
-
 // ✅ Base API version path
 //app.use('/v1/health', healthRouter)
 
