@@ -19,7 +19,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
-      - name: Run Jest tests
-        run: bun test
+      - name: Run Vitest
+        run: npm test
