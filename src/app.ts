@@ -5,18 +5,28 @@ import helmet from 'helmet'
 
 import morganMiddleware from './middleware/morgan'
 
-//FIXME
-//import healthRouter from './routes/health'
-
 const app = express()
 const swaggerDocument = YAML.load('./openapi.yaml')
 
 app.use(helmet())
 app.use(morganMiddleware)
+
 // Serve API docs (not versioned — keep this global)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
-// ✅ Base API version path
-//app.use('/v1/health', healthRouter)
+app.get('/api/v1/health', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Server is running',
+    timestamp: new Date().toISOString(),
+  })
+})
+
+app.use('*', (req, res) => {
+  res.status(404).json({
+    status: 'error',
+    message: `Route ${req.originalUrl} not found`,
+  })
+})
 
 export default app
