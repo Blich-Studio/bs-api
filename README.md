@@ -1,6 +1,7 @@
 # BS API (ts-blog)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![CI](https://github.com/Blich-Studio/bs-api/workflows/CI/badge.svg)](https://github.com/Blich-Studio/bs-api/actions)
 
 A TypeScript-based REST API for a blog application, built with Express.js and Bun. This project follows Test-Driven Development (TDD) principles to ensure robust and maintainable code.
 
