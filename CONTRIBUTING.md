@@ -1,6 +1,48 @@
 # Contributing to BS API
 
-Thank you for your interest in contributing to the BS API (ts-blog)! This project follows Test-Driven Development (TDD) principles, and we appreciate contributions that align with this approach.
+Thank you for your interest in contributing to the BS API (ts-blog)! This project follows Test-Driven Development (TDD) principles and uses [Conventional Commits](https://conventionalcommits.org/) for commit messages, which are processed by [standard-version](https://github.com/conventional-changelog/standard-version) to generate changelogs.
+
+## Commit Guidelines
+
+All commits must follow the Conventional Commits format to ensure proper changelog generation:
+
+### Format
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Types
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, etc.)
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing tests or correcting existing tests
+- `chore`: Changes to the build process or auxiliary tools and libraries
+
+### Examples
+
+- `feat: add user authentication`
+- `fix: resolve null pointer in health check`
+- `docs: update API documentation`
+- `refactor: extract controller logic`
+
+### Breaking Changes
+
+For breaking changes, add `!` after the type/scope and describe in the footer:
+
+```
+feat!: change API response format
+
+BREAKING CHANGE: The response now includes a new field
+```
 
 ## Development Setup
 
