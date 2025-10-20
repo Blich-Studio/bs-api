@@ -42,32 +42,6 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 // API routes
 app.use('/api/v1', healthRouter)
 
-/**
- * @swagger
- * /api/v1/health:
- *   get:
- *     summary: Health check endpoint
- *     responses:
- *       200:
- *         description: Server is running
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: success
- *                 message:
- *                   type: string
- *                   example: Server is running
- *                 timestamp:
- *                   type: string
- *                   format: date-time
- */
-// API routes
-app.use('/api/v1', healthRouter)
-
 app.use((req, res) => {
   res.status(404).json({
     status: 'error',
