@@ -12,11 +12,3 @@ export class HealthController {
     })
   }
 }
-
-/**
- * Factory function to create HealthController instance
- * Follows factory pattern naming convention: create{ControllerName}
- */
-export const createHealthController = (): HealthController => {
-  return new HealthController()
-}
