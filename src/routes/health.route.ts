@@ -1,9 +1,9 @@
 import { Router } from 'express'
 
-import { createHealthController } from '../controllers/health.controller'
+import { HealthController } from '../controllers/health.controller'
 
+const healthController = new HealthController()
 const router = Router()
-const healthController = createHealthController()
 
 /**
  * @swagger
@@ -33,6 +33,6 @@ const healthController = createHealthController()
  *                   description: Application uptime in seconds
  *                   example: 3600
  */
-router.get('/health', healthController.getHealth.bind(healthController))
+router.get('/health', (req, res) => healthController.getHealth(req, res))
 
 export default router
