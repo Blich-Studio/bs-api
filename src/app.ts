@@ -4,6 +4,7 @@ import swaggerJSDoc from 'swagger-jsdoc'
 import helmet from 'helmet'
 
 import morganMiddleware from './middleware/morgan'
+import healthRouter from './routes/health.route'
 
 const app = express()
 
@@ -38,36 +39,8 @@ app.use(morganMiddleware)
 // Serve API docs (not versioned — keep this global)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
-/**
- * @swagger
- * /api/v1/health:
- *   get:
- *     summary: Health check endpoint
- *     responses:
- *       200:
- *         description: Server is running
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: success
- *                 message:
- *                   type: string
- *                   example: Server is running
- *                 timestamp:
- *                   type: string
- *                   format: date-time
- */
-app.get('/api/v1/health', (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'Server is running',
-    timestamp: new Date().toISOString(),
-  })
-})
+// API routes
+app.use('/api/v1', healthRouter)
 
 app.use((req, res) => {
   res.status(404).json({
