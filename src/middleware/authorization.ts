@@ -35,7 +35,13 @@ export function verifyJWT(req: Request, res: Response, next: NextFunction): void
     //   role: decoded.role,
     // }
 
-    // Placeholder: Replace with actual verification
+    // FIXME This JWT decoding implementation is insecure as it only decodes
+    // the token without verifying the signature. An attacker can craft a
+    // token with any payload. The TODO comment acknowledges this, but the
+    // placeholder implementation should not be used in any production-like environment.
+    // Consider adding a more explicit warning or using a library like jsonwebtoken even for the
+    // placeholder.
+
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const buffer = require('buffer').Buffer
     const decoded = JSON.parse(buffer.from(token.split('.')[1], 'base64').toString())
