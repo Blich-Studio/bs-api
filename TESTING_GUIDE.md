@@ -29,7 +29,7 @@ A complete, test-driven authorization system with:
 
 ### ✅ Full Documentation
 
-- AUTHORIZATION.md (complete guide)
+- [wiki/Role-Based-Authorization.md](wiki/Role-Based-Authorization.md) (complete guide)
 - Inline code examples
 - Middleware templates
 
@@ -140,8 +140,8 @@ npm run test:watch
 
 ### Documentation
 
-- `AUTHORIZATION.md` - Complete guide
-- `IMPLEMENTATION_SUMMARY.md` - This overview
+- `wiki/Role-Based-Authorization.md` - Complete guide
+- `TESTING_GUIDE.md` - This quick reference
 
 ## Expected Test Output
 
