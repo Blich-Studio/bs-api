@@ -18,7 +18,6 @@
 Located in `/`:
 
 - `README.md` - Project overview
-- `RELEASE_NOTES.md` - Current release information
 - `CHANGELOG.md` - Version history
 - `CONTRIBUTING.md` - Contributing guide
 - `TESTING_GUIDE.md` - Testing overview
