@@ -140,8 +140,13 @@ npm run test:watch
 
 ### Documentation
 
+<<<<<<< HEAD
+
+- `wiki/Role-Based-Authorization.md` - Complete guide
+- # `TESTING_GUIDE.md` - This quick reference
 - `AUTHORIZATION.md` - Complete guide
 - `IMPLEMENTATION_SUMMARY.md` - This overview
+  > > > > > > > d612326 (feat(blich-43): role enum definition, permission matrix, authorization types)
 
 ## Expected Test Output
 
