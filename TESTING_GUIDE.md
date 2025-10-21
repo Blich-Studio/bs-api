@@ -140,8 +140,11 @@ npm run test:watch
 
 ### Documentation
 
+
 - `wiki/Role-Based-Authorization.md` - Complete guide
 - `TESTING_GUIDE.md` - This quick reference
+- `AUTHORIZATION.md` - Complete guide
+- `IMPLEMENTATION_SUMMARY.md` - This overview
 
 ## Expected Test Output
 
