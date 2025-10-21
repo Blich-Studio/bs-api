@@ -32,39 +32,39 @@ curl http://localhost:3000/health
 
 View API docs at `http://localhost:3000/docs`
 
-**For detailed setup instructions, see the [Quick Start Guide](https://github.com/Blich-Studio/bs-api/wiki/Quick-Start) in the wiki.**
+**For detailed setup instructions, see the [Quick Start Guide](wiki/Quick-Start.md) in the wiki.**
 
 ---
 
 ## 📚 Documentation
 
-All comprehensive documentation is in the **[Project Wiki](https://github.com/Blich-Studio/bs-api/wiki)**:
+All comprehensive documentation is in the **[Project Wiki](wiki/Home.md)**:
 
 ### Getting Started
 
-- [Quick Start](https://github.com/Blich-Studio/bs-api/wiki/Quick-Start) — 5-minute setup
-- [Installation & Setup](https://github.com/Blich-Studio/bs-api/wiki/Installation-and-Setup) — Detailed setup guide
-- [Configuration Guide](https://github.com/Blich-Studio/bs-api/wiki/Configuration-Guide) — Environment variables and settings
+- [Quick Start](wiki/Quick-Start.md) — 5-minute setup
+- [Installation & Setup](wiki/Installation-and-Setup.md) — Detailed setup guide
+- [Configuration Guide](wiki/Configuration-Guide.md) — Environment variables and settings
 
 ### Development
 
-- [TDD Guide](https://github.com/Blich-Studio/bs-api/wiki/TDD-Guide) — Test-Driven Development approach
-- [Testing Best Practices](https://github.com/Blich-Studio/bs-api/wiki/Testing-Best-Practices) — How to write tests
-- [Contributing Guidelines](https://github.com/Blich-Studio/bs-api/wiki/Contributing-Guidelines) — How to contribute
-- [Commit Standards](https://github.com/Blich-Studio/bs-api/wiki/Commit-Standards) — Conventional Commits format
+- [TDD Guide](wiki/TDD-Guide.md) — Test-Driven Development approach
+- [Testing Best Practices](wiki/Testing-Best-Practices.md) — How to write tests
+- [Contributing Guidelines](wiki/Contributing-Guidelines.md) — How to contribute
+- [Commit Standards](wiki/Commit-Standards.md) — Conventional Commits format
 
 ### Technical Architecture
 
-- [Architecture Overview](https://github.com/Blich-Studio/bs-api/wiki/Architecture-Overview) — System design
-- [Tech Stack](https://github.com/Blich-Studio/bs-api/wiki/Tech-Stack) — Technologies and frameworks
-- [Database Schema](https://github.com/Blich-Studio/bs-api/wiki/Database-Schema) — Data models and relationships
-- [API Endpoints](https://github.com/Blich-Studio/bs-api/wiki/API-Endpoints) — Complete API reference
+- [Architecture Overview](wiki/Architecture-Overview.md) — System design
+- [Tech Stack](wiki/Tech-Stack.md) — Technologies and frameworks
+- [Database Schema](wiki/Database-Schema.md) — Data models and relationships
+- [API Endpoints](wiki/API-Endpoints.md) — Complete API reference
 
 ### Security & Authorization
 
-- [Role-Based Authorization](https://github.com/Blich-Studio/bs-api/wiki/Role-Based-Authorization) — JWT and RBAC system
-- [Authentication Flow](https://github.com/Blich-Studio/bs-api/wiki/Authentication-Flow) — How authentication works
-- [Security Considerations](https://github.com/Blich-Studio/bs-api/wiki/Security-Considerations) — Security best practices
+- [Role-Based Authorization](wiki/Role-Based-Authorization.md) — JWT and RBAC system
+- [Authentication Flow](wiki/Authentication-Flow.md) — How authentication works
+- [Security Considerations](wiki/Security-Considerations.md) — Security best practices
 
 ---
 
@@ -155,7 +155,7 @@ The API uses role-based access control (RBAC) with 4 user roles:
 | **Author** | Create/update own articles, comments, likes |
 | **Admin**  | Manage resources (no hard delete)           |
 
-**See [Role-Based Authorization](https://github.com/Blich-Studio/bs-api/wiki/Role-Based-Authorization) for detailed policy.**
+**See [Role-Based Authorization](wiki/Role-Based-Authorization.md) for detailed policy.**
 
 ---
 
@@ -175,7 +175,7 @@ bun run test:watch       # Watch mode (best for development)
 bun run test:coverage    # With coverage report
 ```
 
-**See [TDD Guide](https://github.com/Blich-Studio/bs-api/wiki/TDD-Guide) and [Testing Best Practices](https://github.com/Blich-Studio/bs-api/wiki/Testing-Best-Practices) for details.**
+**See [TDD Guide](wiki/TDD-Guide.md) and [Testing Best Practices](wiki/Testing-Best-Practices.md) for details.**
 
 ---
 
@@ -183,12 +183,12 @@ bun run test:coverage    # With coverage report
 
 We welcome contributions! Before you start:
 
-1. Read [Contributing Guidelines](https://github.com/Blich-Studio/bs-api/wiki/Contributing-Guidelines)
-2. Follow [Commit Standards](https://github.com/Blich-Studio/bs-api/wiki/Commit-Standards) (Conventional Commits)
+1. Read [Contributing Guidelines](wiki/Contributing-Guidelines.md)
+2. Follow [Commit Standards](wiki/Commit-Standards.md) (Conventional Commits)
 3. Write tests for new features (TDD)
 4. Ensure all tests pass: `bun run test`
 
-**Check [Contributing Guidelines](https://github.com/Blich-Studio/bs-api/wiki/Contributing-Guidelines) for the full process.**
+**Check [Contributing Guidelines](wiki/Contributing-Guidelines.md) for the full process.**
 
 ---
 
@@ -201,16 +201,16 @@ In the repository root:
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Contribution guidelines
 - **[LICENSE](LICENSE)** — GNU GPLv3
 
-**For in-depth documentation, refer to the [Wiki](https://github.com/Blich-Studio/bs-api/wiki).**
+**For in-depth documentation, refer to the [Wiki](wiki/Home.md).**
 
 ---
 
 ## 📞 Support & Feedback
 
-- 📖 **Questions?** Check the [Wiki](https://github.com/Blich-Studio/bs-api/wiki)
+- 📖 **Questions?** Check the [Wiki](wiki/Home.md)
 - 🐛 **Found a bug?** [Open an issue](https://github.com/Blich-Studio/bs-api/issues)
 - 💡 **Have an idea?** [Start a discussion](https://github.com/Blich-Studio/bs-api/discussions)
-- 🤝 **Want to contribute?** See [Contributing Guidelines](https://github.com/Blich-Studio/bs-api/wiki/Contributing-Guidelines)
+- 🤝 **Want to contribute?** See [Contributing Guidelines](wiki/Contributing-Guidelines.md)
 
 ---
 

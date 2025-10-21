@@ -99,6 +99,12 @@ PROJECT ROOT
 ├── 📄 CONTRIBUTING.md
 │   └── How to contribute
 │
+<<<<<<< HEAD
+=======
+├── 📄 AUTHORIZATION.md
+│   └── Authorization system details
+│
+>>>>>>> 02fa354 (docs(wiki): add Home index and summary)
 ├── 📄 TESTING_GUIDE.md
 │   └── Testing overview
 │
@@ -173,10 +179,18 @@ PROJECT ROOT
 
 **Goal:** Understand security implementation
 
+<<<<<<< HEAD
+
 1. Start → `wiki/Authentication-Flow.md`
 2. Learn → `wiki/Role-Based-Authorization.md`
 3. Review → `wiki/Security-Considerations.md`
-4. Check → `wiki/API-Endpoints.md` (protected routes)
+4. # Check → `wiki/API-Endpoints.md` (protected routes)
+5. Start → `AUTHORIZATION.md`
+6. Learn → `wiki/Authentication-Flow.md`
+7. Review → `wiki/Role-Based-Authorization.md`
+8. Study → `wiki/Security-Considerations.md`
+9. Check → `wiki/API-Endpoints.md` (protected routes)
+   > > > > > > > 02fa354 (docs(wiki): add Home index and summary)
 
 ### Path 5: QA Engineer (⏱️ 50 minutes)
 
@@ -194,14 +208,20 @@ PROJECT ROOT
 
 ### Project Root Documents
 
-| File               | Purpose                                | Audience     |
-| ------------------ | -------------------------------------- | ------------ |
-| `README.md`        | Project overview, features, tech stack | Everyone     |
-| `RELEASE_NOTES.md` | v0.2.4 release information             | Everyone     |
-| `CHANGELOG.md`     | Version history                        | Developers   |
-| `CONTRIBUTING.md`  | How to contribute                      | Developers   |
-| `TESTING_GUIDE.md` | Testing overview                       | QA Engineers |
-| `WIKI_INDEX.md`    | THIS FILE - Documentation index        | Everyone     |
+| File               | Purpose                                | Audience   |
+| ------------------ | -------------------------------------- | ---------- |
+| `README.md`        | Project overview, features, tech stack | Everyone   |
+| `RELEASE_NOTES.md` | v0.2.4 release information             | Everyone   |
+| `CHANGELOG.md`     | Version history                        | Developers |
+| `CONTRIBUTING.md`  | How to contribute                      | Developers |
+
+# <<<<<<< HEAD
+
+| `AUTHORIZATION.md` | Authorization details | Backend Devs |
+
+> > > > > > > 02fa354 (docs(wiki): add Home index and summary)
+> > > > > > > | `TESTING_GUIDE.md` | Testing overview | QA Engineers |
+> > > > > > > | `WIKI_INDEX.md` | THIS FILE - Documentation index | Everyone |
 
 ### Wiki Documents - Getting Started
 
@@ -265,16 +285,30 @@ PROJECT ROOT
 
 ### By Role
 
-| Role              | Start With                       | Then Read                                                              |
+<<<<<<< HEAD
+| Role | Start With | Then Read |
 | ----------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| **New User**      | `README.md`                      | `wiki/Home.md` → `wiki/Quick-Start.md`                                 |
-| **Developer**     | `CONTRIBUTING.md`                | `wiki/TDD-Guide.md` → `wiki/Contributing-Guidelines.md`                |
-| **Architect**     | `wiki/Architecture-Overview.md`  | `wiki/Tech-Stack.md` → `wiki/Database-Schema.md`                       |
-| **DevOps**        | `wiki/Installation-and-Setup.md` | `wiki/Configuration-Guide.md`                                          |
-| **QA Engineer**   | `TESTING_GUIDE.md`               | `wiki/Testing-Best-Practices.md`                                       |
-| **Security Eng.** | `wiki/Authentication-Flow.md`    | `wiki/Role-Based-Authorization.md` → `wiki/Security-Considerations.md` |
-| **DBA**           | `wiki/Database-Schema.md`        | `wiki/Architecture-Overview.md`                                        |
-| **Frontend Dev**  | `wiki/Quick-Start.md`            | `wiki/API-Endpoints.md` → `wiki/Authentication-Flow.md`                |
+| **New User** | `README.md` | `wiki/Home.md` → `wiki/Quick-Start.md` |
+| **Developer** | `CONTRIBUTING.md` | `wiki/TDD-Guide.md` → `wiki/Contributing-Guidelines.md` |
+| **Architect** | `wiki/Architecture-Overview.md` | `wiki/Tech-Stack.md` → `wiki/Database-Schema.md` |
+| **DevOps** | `wiki/Installation-and-Setup.md` | `wiki/Configuration-Guide.md` |
+| **QA Engineer** | `TESTING_GUIDE.md` | `wiki/Testing-Best-Practices.md` |
+| **Security Eng.** | `wiki/Authentication-Flow.md` | `wiki/Role-Based-Authorization.md` → `wiki/Security-Considerations.md` |
+| **DBA** | `wiki/Database-Schema.md` | `wiki/Architecture-Overview.md` |
+| **Frontend Dev** | `wiki/Quick-Start.md` | `wiki/API-Endpoints.md` → `wiki/Authentication-Flow.md` |
+=======
+| Role | Start With | Then Read |
+| ----------------- | -------------------------------- | ----------------------------------------------------------------- |
+| **New User** | `README.md` | `wiki/Home.md` → `wiki/Quick-Start.md` |
+| **Developer** | `CONTRIBUTING.md` | `wiki/TDD-Guide.md` → `wiki/Contributing-Guidelines.md` |
+| **Architect** | `wiki/Architecture-Overview.md` | `wiki/Tech-Stack.md` → `wiki/Database-Schema.md` |
+| **DevOps** | `wiki/Installation-and-Setup.md` | `wiki/Configuration-Guide.md` |
+| **QA Engineer** | `TESTING_GUIDE.md` | `wiki/Testing-Best-Practices.md` |
+| **Security Eng.** | `AUTHORIZATION.md` | `wiki/Authentication-Flow.md` → `wiki/Security-Considerations.md` |
+| **DBA** | `wiki/Database-Schema.md` | `wiki/Architecture-Overview.md` |
+| **Frontend Dev** | `wiki/Quick-Start.md` | `wiki/API-Endpoints.md` → `wiki/Authentication-Flow.md` |
+
+> > > > > > > 02fa354 (docs(wiki): add Home index and summary)
 
 ---
 
