@@ -1,152 +1,225 @@
-# BS API (ts-blog)
+# BS API
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![CI](https://github.com/Blich-Studio/bs-api/workflows/CI/badge.svg)](https://github.com/Blich-Studio/bs-api/actions)
 
-A TypeScript-based REST API for a blog application, built with Express.js and Bun. This project follows Test-Driven Development (TDD) principles to ensure robust and maintainable code.
+A production-grade TypeScript REST API for a blog application. Built with **Express.js**, **Bun**, and **MongoDB**, following **Test-Driven Development** principles.
 
-## Links
+**Version:** v0.2.4 (Pre-Alpha) | **Release Date:** October 21, 2025
 
-- [API Documentation](http://localhost:3000/docs) (when running locally)
-- [Contributing Guide](CONTRIBUTING.md)
-- [GitHub Repository](https://github.com/Blich-Studio/bs-api)
+---
 
-## Features
+## 🚀 Quick Start
 
-- User authentication and profile management via Supabase
-- Article creation, retrieval, and management with MongoDB
-- Comment system for articles
-- Like functionality
-- Health check endpoint
-- Comprehensive API documentation via Swagger UI
-- Automatic OpenAPI spec generation from code comments
-
-## Tech Stack
-
-- **Runtime**: Bun (fast JavaScript runtime)
-- **Framework**: Express.js
-- **Language**: TypeScript
-- **Database**: MongoDB for CMS data (articles, comments, etc.)
-- **Authentication**: Supabase for user management and auth
-- **Testing**: Vitest with coverage reporting
-- **Linting/Formatting**: ESLint and Prettier
-- **Documentation**: OpenAPI 3.0 specification with swagger-jsdoc
-- **Security**: Helmet for HTTP headers
-- **Logging**: Morgan middleware
-
-## Installation
-
-To install dependencies:
+**Get up and running in 5 minutes:**
 
 ```bash
+# Clone and install
+git clone https://github.com/Blich-Studio/bs-api.git
+cd bs-api
 bun install
-```
 
-## Configuration
-
-Copy `.env.example` to `.env.local` and update the values:
-
-```bash
+# Configure environment
 cp .env.example .env.local
+# Edit .env.local with your Supabase and MongoDB credentials
+
+# Run development server
+bun run dev
+
+# In another terminal, verify it works
+curl http://localhost:3000/health
 ```
 
-### Environment Variables
+View API docs at `http://localhost:3000/docs`
 
-- **SUPABASE_URL**: Your Supabase project URL
-- **SUPABASE_ANON_KEY**: Your Supabase anonymous key
-- **PORT**: Server port (default: 3000)
-- **NODE_ENV**: Environment (development/production)
-- **OPENAPI_TITLE**: API title for OpenAPI docs
-- **OPENAPI_VERSION**: API version
-- **OPENAPI_DESCRIPTION**: API description
-- **OPENAPI_SERVER_URL**: Server URL for OpenAPI docs
+**For detailed setup instructions, see the [Quick Start Guide](wiki/Quick-Start.md) in the wiki.**
 
-## Usage
+---
+
+## 📚 Documentation
+
+All comprehensive documentation is in the **[Project Wiki](wiki/Home.md)**:
+
+### Getting Started
+
+- [Quick Start](wiki/Quick-Start.md) — 5-minute setup
+- [Installation & Setup](wiki/Installation-and-Setup.md) — Detailed setup guide
+- [Configuration Guide](wiki/Configuration-Guide.md) — Environment variables and settings
 
 ### Development
 
-Run the server in watch mode for development:
+- [TDD Guide](wiki/TDD-Guide.md) — Test-Driven Development approach
+- [Testing Best Practices](wiki/Testing-Best-Practices.md) — How to write tests
+- [Contributing Guidelines](wiki/Contributing-Guidelines.md) — How to contribute
+- [Commit Standards](wiki/Commit-Standards.md) — Conventional Commits format
 
-```bash
-bun run dev
+### Technical Architecture
+
+- [Architecture Overview](wiki/Architecture-Overview.md) — System design
+- [Tech Stack](wiki/Tech-Stack.md) — Technologies and frameworks
+- [Database Schema](wiki/Database-Schema.md) — Data models and relationships
+- [API Endpoints](wiki/API-Endpoints.md) — Complete API reference
+
+### Security & Authorization
+
+- [Role-Based Authorization](wiki/Role-Based-Authorization.md) — JWT and RBAC system
+- [Authentication Flow](wiki/Authentication-Flow.md) — How authentication works
+- [Security Considerations](wiki/Security-Considerations.md) — Security best practices
+
+---
+
+## ✨ Key Features
+
+| Feature                | Details                                                                 |
+| ---------------------- | ----------------------------------------------------------------------- |
+| 🔐 **Authentication**  | JWT-based with Supabase integration                                     |
+| 👥 **User Management** | Profile management and role-based access (Guest, Reader, Author, Admin) |
+| 📝 **Articles**        | Full CRUD with MongoDB persistence                                      |
+| 💬 **Comments**        | Thread-based commenting system                                          |
+| 👍 **Likes**           | Track engagement on articles                                            |
+| 📚 **API Docs**        | Interactive Swagger UI at `/docs`                                       |
+| ✅ **Type Safe**       | Full TypeScript with strict mode                                        |
+| 🧪 **Well Tested**     | Comprehensive unit & integration tests                                  |
+| 🚀 **TDD**             | Test-driven development throughout                                      |
+
+---
+
+## 🛠️ Tech Stack
+
+```
+Runtime:       Bun (⚡ fast JavaScript runtime)
+Framework:     Express.js
+Language:      TypeScript (strict mode)
+Databases:     MongoDB (articles, comments, likes)
+               Supabase (user auth)
+Testing:       Vitest with coverage
+Documentation: OpenAPI 3.0 + Swagger UI
+Security:      Helmet.js, CORS, JWT
+Logging:       Morgan + ECS logger
 ```
 
-### Production
+---
 
-Start the server:
-
-```bash
-bun run start
-```
-
-The server will run on the configured port (check `PORT` in `.env.local`).
-
-## API Documentation
-
-Once the server is running, visit `/docs` to access the Swagger UI for interactive API documentation.
-
-The OpenAPI specification is generated automatically from JSDoc comments in the code.
-
-## Testing
-
-This project is developed using Test-Driven Development (TDD). All features are backed by comprehensive unit and integration tests.
-
-### Run All Tests
+## 💻 Common Commands
 
 ```bash
-bun run test
+# Development
+bun run dev                # Start dev server (with hot-reload)
+bun run start             # Start production server
+
+# Testing
+bun run test              # Run all tests
+bun run test:watch       # Run tests in watch mode
+bun run test:coverage    # Generate coverage report
+bun run test:unit        # Run unit tests only
+bun run test:integration # Run integration tests only
+
+# Code Quality
+bun run lint              # Check code style
+bun run lint:fix         # Fix linting issues
+bun run format           # Format code with Prettier
+
+# Releases
+bun run release          # Create a new release
 ```
 
-### Run Unit Tests Only
+---
 
-```bash
-bun run test:unit
-```
-
-### Run Integration Tests Only
-
-```bash
-bun run test:integration
-```
-
-### Test Coverage
-
-Generate coverage report:
-
-```bash
-bun run test:coverage
-```
-
-### Watch Mode
-
-Run tests in watch mode during development:
-
-```bash
-bun run test:watch
-```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
-├── app.ts              # Main Express app setup
+├── app.ts              # Express app setup
 ├── server.ts           # Server entry point
 ├── controllers/        # Route handlers
 ├── routes/             # Route definitions
-├── schemas/            # Data validation schemas
-├── services/           # Business logic
 ├── types/              # TypeScript type definitions
-├── utils/              # Utility functions
 ├── middleware/         # Custom middleware
-└── __tests__/          # Test files
+├── utils/              # Utility functions
+├── schemas/            # Data validation schemas
+└── __tests__/          # Test suites
     ├── unit/           # Unit tests
     └── integration/    # Integration tests
 ```
 
-## Contributing
+---
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## 🔐 Authorization & Roles
 
-## License
+The API uses role-based access control (RBAC) with 4 user roles:
 
-This project is licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
+| Role       | Permissions                                 |
+| ---------- | ------------------------------------------- |
+| **Guest**  | Read articles (public)                      |
+| **Reader** | Read, comment, like; update own profile     |
+| **Author** | Create/update own articles, comments, likes |
+| **Admin**  | Manage resources (no hard delete)           |
+
+**See [Role-Based Authorization](wiki/Role-Based-Authorization.md) for detailed policy.**
+
+---
+
+## 🧪 Testing
+
+This project is built with **Test-Driven Development (TDD)**:
+
+1. **Write a failing test** (RED)
+2. **Implement code to pass** (GREEN)
+3. **Refactor for quality** (REFACTOR)
+
+Run tests with:
+
+```bash
+bun run test              # All tests
+bun run test:watch       # Watch mode (best for development)
+bun run test:coverage    # With coverage report
+```
+
+**See [TDD Guide](wiki/TDD-Guide.md) and [Testing Best Practices](wiki/Testing-Best-Practices.md) for details.**
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Before you start:
+
+1. Read [Contributing Guidelines](wiki/Contributing-Guidelines.md)
+2. Follow [Commit Standards](wiki/Commit-Standards.md) (Conventional Commits)
+3. Write tests for new features (TDD)
+4. Ensure all tests pass: `bun run test`
+
+**Check [Contributing Guidelines](wiki/Contributing-Guidelines.md) for the full process.**
+
+---
+
+## 📄 Project Documentation Files
+
+In the repository root:
+
+- **[RELEASE_NOTES.md](RELEASE_NOTES.md)** — Current release (v0.2.4, Pre-Alpha)
+- **[CHANGELOG.md](CHANGELOG.md)** — Version history
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Contribution guidelines
+- **[LICENSE](LICENSE)** — GNU GPLv3
+
+**For in-depth documentation, refer to the [Wiki](wiki/Home.md).**
+
+---
+
+## 📞 Support & Feedback
+
+- 📖 **Questions?** Check the [Wiki](wiki/Home.md)
+- 🐛 **Found a bug?** [Open an issue](https://github.com/Blich-Studio/bs-api/issues)
+- 💡 **Have an idea?** [Start a discussion](https://github.com/Blich-Studio/bs-api/discussions)
+- 🤝 **Want to contribute?** See [Contributing Guidelines](wiki/Contributing-Guidelines.md)
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU General Public License v3.0**. See [LICENSE](LICENSE) for details.
+
+---
+
+**Last Updated:** October 21, 2025  
+**Project Version:** v0.2.4 (Pre-Alpha)  
+**Wiki:** [github.com/Blich-Studio/bs-api/wiki](https://github.com/Blich-Studio/bs-api/wiki)
