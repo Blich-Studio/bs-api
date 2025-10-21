@@ -29,7 +29,7 @@ A complete, test-driven authorization system with:
 
 ### ✅ Full Documentation
 
-- AUTHORIZATION.md (complete guide)
+- [wiki/Role-Based-Authorization.md](wiki/Role-Based-Authorization.md) (complete guide)
 - Inline code examples
 - Middleware templates
 
@@ -141,12 +141,17 @@ npm run test:watch
 ### Documentation
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 - `wiki/Role-Based-Authorization.md` - Complete guide
 - # `TESTING_GUIDE.md` - This quick reference
 - `AUTHORIZATION.md` - Complete guide
 - `IMPLEMENTATION_SUMMARY.md` - This overview
   > > > > > > > d612326 (feat(blich-43): role enum definition, permission matrix, authorization types)
+=======
+- `wiki/Role-Based-Authorization.md` - Complete guide
+- `TESTING_GUIDE.md` - This quick reference
+>>>>>>> d9e642b (docs: fix broken links - consolidate references to wiki pages (#15))
 
 ## Expected Test Output
 
